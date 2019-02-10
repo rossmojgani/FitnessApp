@@ -4,6 +4,7 @@ import {Button} from 'reactstrap';
 import logo from './Logo.png';
 import WeekCalendar from 'react-week-calendar';
 import 'react-week-calendar/dist/style.css';
+import CustomDayCell from './customDayCell';
 
 class DefaultPage extends Component {
 
@@ -33,8 +34,6 @@ class DefaultPage extends Component {
                 <h1>Fitness Friend</h1>
             </div>
           </div>
-
-
           </div>
           <ul className="header">
             <li><Link to="/main/fitness">Fitness</Link></li>
@@ -50,9 +49,14 @@ class DefaultPage extends Component {
           <Button>
               Edit Info
           </Button>
+          <div style={{flex:2,flexDirection:"row",justifyContent:'space-between', marginBottom: 34}}>
+        
+          </div>
+          <c1>
             <WeekCalendar scaleHeaderTitle = "Workout Plan" 
-            scaleUnit = '1800' scaleFormat = 'HH:mm' useModal = 'false' />
-          
+            scaleUnit = {1800} scaleFormat = ' ' dayFormat = 'dddd' columnSpacing={2} cellHeight = {250}
+            dayCellComponent={CustomDayCell} numberOfDays= {7}/>
+          </c1>
           </div>
           </div>
           </div>
