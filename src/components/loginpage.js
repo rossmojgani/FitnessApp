@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 
 class LoginPage extends Component {
@@ -69,7 +70,7 @@ class LoginBox extends Component {
                     <button
                         type = "button"
                         className = "login-btn"
-                        onClick = {this.submitLogin.bind(this)}>Login</button>
+                        onClick = {this.submitLogin.bind(this)}><Link to="/main" >Login</Link></button>
                 </div>
             </div>
         );
