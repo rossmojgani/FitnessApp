@@ -212,3 +212,9 @@ $blue_theme: #70a1ff;
 .show {
   visibility: visible;
 }
+
+
+.nobull {
+  list-style-type: none;
+}
+
