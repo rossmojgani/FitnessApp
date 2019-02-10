@@ -1,0 +1,23 @@
+workout,exerciseOne,exerciseTwo,exerciseThree,exerciseFour,exerciseFive
+chestOne,incline bench press,flat bench press,cable flys,none,none
+chestTwo,incline dumbell press,incline dumbell flys,butterflys,none,none
+chestThree,flat bench press,dumbell pullover,cable crossover,none,none
+chestFour,reverse-grip bench press,decline bench press,chest dips,none,none
+backOne,bent over barbell deadlift,wide-grip pull up,wide-grip seated cable row,none,none
+backTwo,single arm dumbell row,lat pulldown,close-grip seated cable row,none,none
+backThree,standing t-bar row,lat pulldown,wide-grip weighted pull ups,none,none
+shoulderOne,barbell push press,dumbell incline row,seated overhead dumbell press,none,none
+shoulderTwo,arnold press,machine rearmdeft-fly,dumbell lateral raise,none,none
+shoulderThree,barbell push press,dumbell front raise,ez bar pull,none,none
+bicepOne,incline dumbell hammer curl,incline inner-bicep curl,ez bar curl,none,none
+bicepTwo,zottman curl ,preacher curl,cable curl,none,none
+bicepThree,wide-grip straight bar curl,standing hammer curl,standing bicep curl,none,none
+tricepOne,weighted dips,ez bar skullcrusher,tricep overhead extension with rope,none,none
+tricepTwo,tricep dumbell kickback,weighted dips,tricep pushdown cable,none,none
+tricepThree,ez bar skullcrusher,standing dumbell tricep press,tricep straightbar cable push down,none,none
+legOne,squats,deadlifts,leg press,quad extension,hamstring curl
+legTwo,squats,single-leg press,dumbell lunges,calf raises,dumbell step ups
+legThree,squats,pistol squats,bulgarian split squat,romanian deadlift,quad extension
+absOne,crunches,flutter kicks,sitting twists,none,none
+absTwo,knee to elbow,wipers,bicycle crunches,none,none
+absThree,haning leg raises,plank crunches,planks,none,none
