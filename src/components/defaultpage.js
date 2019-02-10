@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Link} from "react-router-dom";
 import {Button} from 'reactstrap';
 import logo from './Logo.png';
-//import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
+import MyComponent from './calendar';
 
 class DefaultPage extends Component {
 
@@ -28,14 +28,15 @@ class DefaultPage extends Component {
           <div className="content">
           <div>
           <Button>
-          Fitness Plan
+              Fitness Plan
           </Button>
           <Button>
-          Nutrition Plan
+              Nutrition Plan
           </Button>
           <Button>
               Edit Info
           </Button>
+          <myCalendar/>
           </div>
           </div>
           </div>
