@@ -143,6 +143,7 @@ $blue_theme: #70a1ff;
       background: rgba(15, 15, 15, 0.01);
   }
 
+
 .login-input:hover {
     border: 2px solid $blue_theme;
 }
@@ -235,6 +236,10 @@ h2, p, ul, li {
   font-family: sans-serif;
 }
 
+.c1{
+  line-height: -140px;
+}
+
 h1{
   text-align: centre;
   color: #3E7F52;
@@ -247,7 +252,7 @@ h1{
   position: absolute;
   right: -140px;
   vertical-align: 50;
-  line-height: 2.02;
+  line-height: 180.02%;
   
 }
 ul.header li {
@@ -312,3 +317,4 @@ ul.header li a {
       float: left;
       width: 55%;
     }
+
