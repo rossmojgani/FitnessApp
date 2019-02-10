@@ -7,6 +7,21 @@ import 'react-week-calendar/dist/style.css';
 
 class DefaultPage extends Component {
 
+    handleFitnessPlan (input) => {
+    event.preventDefault();
+    fetch('http://localhost:8000', {
+    method: "POST",
+    headers: {'Content-type': 'application/json'},
+    body: data
+        }).then(function(response){
+            return response.json();
+        })
+        .then(function(output){
+        console.log(output);
+        window.location.href = output.redirect;
+        });
+    }
+
     render() {
 
         return (
@@ -28,9 +43,7 @@ class DefaultPage extends Component {
           </ul>
           <div className="content">
           <div>
-          <Button>
-              Fitness Plan
-          </Button>
+          <ButtononClick = {this.handlefitnessPlan}>Fitness Plan</Button>
           <Button>
               Nutrition Plan
           </Button>
