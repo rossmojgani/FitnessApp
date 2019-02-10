@@ -48,4 +48,8 @@ class DefaultPage extends Component {
 
 }
 
+<<<<<<< HEAD
 export default DefaultPage;
+=======
+export default DefaultPage;
+>>>>>>> login_page
