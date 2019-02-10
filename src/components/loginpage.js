@@ -17,14 +17,14 @@ class LoginPage extends Component {
                             <form className="register-form">
                                 <input type="text" placeholder="username"/>
                                 <input type="text" placeholder="password"/>
-                                <button><Link to="/main" > Login</Link></button>
+                                <button><Link to="/main"> Login</Link></button>
                                 <p class="message"> Not Registered?</p>
                             </form>
                             <form className="login-form">
                                 <input type="text" placeholder="username"/>
                                 <input type="text" placeholder="password"/>
                                 <input type="text" placeholder="email"/>
-                                <button><Link to="/main" > Create User</Link></button>
+                                <button><Link to="/" > Create User</Link></button>
                             </form>
                         </div>
                     </div>
