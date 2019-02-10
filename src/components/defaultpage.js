@@ -8,7 +8,7 @@ import CustomDayCell from './customDayCell';
 
 class DefaultPage extends Component {
 
-    handleFitnessPlan (input) => {
+   /* handleFitnessPlan = (input) => {
     event.preventDefault();
     fetch('http://localhost:8000', {
     method: "POST",
@@ -21,7 +21,7 @@ class DefaultPage extends Component {
         console.log(output);
         window.location.href = output.redirect;
         });
-    }
+    }*/
 
     render() {
 
@@ -42,7 +42,7 @@ class DefaultPage extends Component {
           </ul>
           <div className="content">
           <div>
-          <ButtononClick = {this.handlefitnessPlan}>Fitness Plan</Button>
+          <Button onClick = {this.handlefitnessPlan}>Fitness Plan</Button>
           <Button>
               Nutrition Plan
           </Button>
