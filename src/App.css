@@ -98,14 +98,14 @@ $blue_theme: #70a1ff;
 }
 
 //Header
-  .header {
+  .login_header {
     text-align: center;
     padding: 5px;
     margin-bottom: 17px;
     /* margin-left: 35px; */
     /* margin-right: 35px; */
     font-family: Ozxgen, sans-serif;
-    font-size: 22px;
+    font-size: 50px;
     border-bottom: 2px solid $blue_theme;
   }
 

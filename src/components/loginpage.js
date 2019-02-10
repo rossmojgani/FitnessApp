@@ -16,12 +16,13 @@ class LoginPage extends Component {
 
         return (
             <div className = "root-container">
-
+            <center>
             <div className="box-container">
             {this.state.isLoginOpen && <LoginBox/>
             }
         {this.state.isRegisterOpen && <RegisterBox/>}
     </div>
+            </center>
             </div>
         );
     }
@@ -42,8 +43,8 @@ class LoginBox extends Component {
     render() {
         return (
             <div className = "inner-container">
-                <div className = "header">
-                    Login
+                <div className = "login_header">
+                    Welcome to Fitness Friend!
                 </div>
                 <div className = "box">
 
