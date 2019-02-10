@@ -25,10 +25,12 @@
     "simple-react-calendar": "^1.7.0"
   },
   "scripts": {
+    "dev": "npm run start | npm run runBE",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "runBE": "node src/Backend/backendServer.js"
   },
   "eslintConfig": {
     "extends": "react-app"
