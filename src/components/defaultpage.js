@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {Link} from "react-router-dom";
 import {Button} from 'reactstrap';
 import logo from './Logo.png';
-import MyComponent from './calendar';
+import WeekCalendar from 'react-week-calendar';
+import 'react-week-calendar/dist/style.css';
 
 class DefaultPage extends Component {
 
@@ -36,7 +37,9 @@ class DefaultPage extends Component {
           <Button>
               Edit Info
           </Button>
-          <myCalendar/>
+            <WeekCalendar scaleHeaderTitle = "Workout Plan" 
+            scaleUnit = '1800' scaleFormat = 'HH:mm' useModal = 'false' />
+          
           </div>
           </div>
           </div>
