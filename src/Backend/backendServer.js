@@ -3,32 +3,39 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const port = 8000;
 const app = express();
-
-
 app.use(cors());
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
-
+//app.use(bodyParser.urlencoded({extended: true}));
+//app.use(bodyParser.json());
+console.log('reach line 1');
+//const fileUpload = require('express-fileupload');
+console.log('reach line 2');
 var mysql = require('mysql');
-
-var con = mysql.createConnection({
-    host: "localhost",
-    user: "admin",
-    password: "default"
+const path = require('path');
+var db = mysql.createConnection ({
+    host: 'sql3.freemysqlhosting.net',
+    user: 'sql3278415',
+    password: 'd78g2zp8QV',
+    //database: 'users',
+    port: '3306'
 });
 
-con.connect(function(err) {
-    if (err) throw err;
-    console.log("Connected!");
-    con.query("CREATE DATABASE mydb", function (err, result) {
-        if (err) throw err;
-        console.log("Database created");
+// connect to database
+db.connect((err) => {
+    if (err) {
+        console.log('error connecting: ' + err.stack);
+        throw err;
+    }
+    console.log('Connected to database');
 });
+global.db = db;
 
-app.post("/main", function(req, res) {
-    myCursor = db.inventory.find( { status: "D" } )
-    res.send({redirect: '/#/authentication_request'});
-});
+//app.set('port', process.env.port || port); // set express to use this port
+//app.set('views', __dirname + '/views'); // set express to look in this folder to render our view
+//app.set('view engine', 'ejs'); // configure template engine
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json()); // parse form data client
+app.use(express.static(path.join(__dirname, 'public'))); // configure express to use public folder
+//app.use(fileUpload()); // configure fileupload
 
 app.post("/", function(req, res) {
     const username = req.body.username;
