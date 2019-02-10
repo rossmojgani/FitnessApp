@@ -5,8 +5,42 @@ class LoginPage extends Component {
 
     constructor(props) {
         super(props);
-        this.state ={};
+        this.state ={
+            username:'',
+            password:'',
+        };
     }
+
+    updatePass = (evt) => {
+        this.setState({password: evt.target.value});
+    }
+
+    updateUser = (evt) => {
+        this.setState({username: evt.target.value});
+    }
+
+    handleRedirect = (output) => {
+        console.log(output.redirect);
+        //window.location.href = data;
+    }
+
+    handleLogin = (event) =>{
+        event.preventDefault();
+        const data = JSON.stringify(this.state);
+
+        fetch('http://localhost:8000', {
+            method: "POST",
+            headers: {'Content-type': 'application/json'},
+            body: data
+        }).then(function(response){
+            return response.json();
+        })
+            .then(function(output){
+                console.log(output);
+                window.location.href = output.redirect;
+            });
+    }
+
 
     submitLogin(e) {}
 
@@ -28,7 +62,8 @@ class LoginPage extends Component {
                             type = "text"
                             name = "username"
                             className = "login-input"
-                            placeholder = "Username"/>
+                            placeholder = "Username"
+                            onChange={evt => this.updateUser(evt)}/>
                     </div>
 
                     <div className = "input-group">
@@ -38,13 +73,14 @@ class LoginPage extends Component {
                             type = "password"
                             name = "password"
                             className = "login-input"
-                            placeholder = "Password"/>
+                            placeholder = "Password"
+                            onChange={evt => this.updatePass(evt)}/>
                     </div>
 
                     <button
                         type = "button"
                         className = "login-btn"
-                        onClick = {this.submitLogin.bind(this)}><Link to="/main" >Login</Link></button>
+                        onClick = {this.handleLogin}>Login</button>
 
                     <button
                         type = "button"
