@@ -19,11 +19,6 @@ class LoginPage extends Component {
         this.setState({username: evt.target.value});
     }
 
-    handleRedirect = (output) => {
-        console.log(output.redirect);
-        //window.location.href = data;
-    }
-
     handleLogin = (event) =>{
         event.preventDefault();
         const data = JSON.stringify(this.state);
@@ -41,7 +36,6 @@ class LoginPage extends Component {
             });
     }
 
-
     submitLogin(e) {}
 
     render() {
@@ -49,49 +43,49 @@ class LoginPage extends Component {
             <div className = "root-container">
                 <center>
                     <div className = "box-container">
-            <div className = "inner-container">
-                <div className = "login_header">
-                    Welcome to Fitness Friend!
-                </div>
-                <div className = "box">
+                        <div className = "inner-container">
+                            <div className = "login_header">
+                                Welcome to Fitness Friend!
+                            </div>
+                            <div className = "box">
 
-                    <div className = "input-group">
-                        <label htmlFor = "username">Username
-                        </label>
-                        <input
-                            type = "text"
-                            name = "username"
-                            className = "login-input"
-                            placeholder = "Username"
-                            onChange={evt => this.updateUser(evt)}/>
+                                <div className = "input-group">
+                                    <label htmlFor = "username">Username
+                                    </label>
+                                    <input
+                                        type = "text"
+                                        name = "username"
+                                        className = "login-input"
+                                        placeholder = "Username"
+                                        onChange={evt => this.updateUser(evt)}/>
+                                </div>
+
+                                <div className = "input-group">
+                                    <label htmlFor = "password"> Password
+                                    </label>
+                                    <input
+                                        type = "password"
+                                        name = "password"
+                                        className = "login-input"
+                                        placeholder = "Password"
+                                        onChange={evt => this.updatePass(evt)}/>
+                                </div>
+
+                                <button
+                                    type = "button"
+                                    className = "login-btn"
+                                    onClick = {this.handleLogin}>Login</button>
+
+                                <button
+                                    type = "button"
+                                    className = "login-btn"
+                                >
+                                    <Link to="/registerpage" > Create New User </Link>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-
-                    <div className = "input-group">
-                        <label htmlFor = "password"> Password
-                        </label>
-                        <input
-                            type = "password"
-                            name = "password"
-                            className = "login-input"
-                            placeholder = "Password"
-                            onChange={evt => this.updatePass(evt)}/>
-                    </div>
-
-                    <button
-                        type = "button"
-                        className = "login-btn"
-                        onClick = {this.handleLogin}>Login</button>
-
-                    <button
-                        type = "button"
-                        className = "login-btn"
-                        >
-                         <Link to="/registerpage" > Create New User </Link>
-                    </button>
-                </div>
-            </div>
-            </div>
-            </center>
+                </center>
             </div>
         );
     }

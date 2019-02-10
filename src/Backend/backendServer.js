@@ -12,7 +12,7 @@ app.post("/", function(req, res) {
     const password = req.body.password;
     console.log("Data: %s, %s", username, password);
     if (username == "kelwishahy" && password == "123") {
-        res.send({redirect: '/#/registerpage'});
+        res.send({redirect: '/#/main'});
     } else {
         res.send({redirect: '/#/'});
     }
